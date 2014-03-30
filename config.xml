@@ -11,8 +11,10 @@
     <preference name="phonegap-version" value="3.1.0" />
     <feature name="http://api.phonegap.com/1.0/device" />
     
+		
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.camera" />
+	<gap:plugin name="org.apache.cordova.console" /> <!-- required -->
     <!--<gap:plugin name="org.apache.cordova.media-capture" />-->
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />
@@ -53,4 +55,5 @@
 
     <content src="http://dev.commonroom.com.au/?appp=1" />
     <access origin="*" subdomains="true" />
+	<access origin="http://puship.cloudapp.net" /> <!-- Add the following line after the origin -->
 </widget>
