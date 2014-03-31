@@ -45,49 +45,5 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-		
-		
-	Puship.PushipAppId = "OOjoXqxKHCwQNF8"; // Replace this with your Puship Application ID
-	
-	
-	if (Puship.Common.GetCurrentOs()==Puship.OS.ANDROID){
-		var GCMCode = "169637551914"; // Replace this with your google senderID
-		Puship.GCM.Register(GCMCode,
-		{
-			successCallback: function (pushipresult){
-				navigator.notification.alert("device registed");
-			},
-			failCallback: function (pushipresult){
-				navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
-			}
-		});
-	} else if (Puship.Common.GetCurrentOs()==Puship.OS.IOS){
-		Puship.APNS.Register(
-		{
-			successCallback: function (pushipresult){
-				navigator.notification.alert("device registed");
-			},
-			failCallback: function (pushipresult){
-				navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
-			}
-		});
-	} else {
-		Console.log("Not supported platform");
-	}
-	
-	Puship.Common.OnPushReceived(function(event) {
-		
-		console.log('push received');
-		
-		try
-		{
-			alert(event.notification.Alert);
-		}
-		catch(err)
-		{
-			console.warn("Cannot display alert in background");
-		}
-	});
-		
     }
 };
