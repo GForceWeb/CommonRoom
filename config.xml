@@ -52,6 +52,6 @@
 
     <icon src="icon.png" />
 
-    <content src="http://dev.commonroom.com.au/?appp=1" />
+    <content src="http://app.commonroom.com.au/?appp=1" />
     <access origin="*" subdomains="true" />
 </widget>
