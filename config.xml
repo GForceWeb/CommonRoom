@@ -1,35 +1,48 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="au.com.commonroom.app" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "au.com.commonroom.app"
+        version   = "1.0.2">
+
     <name>Common Room</name>
+
     <description>
         Your personalised university noticeboard.
     </description>
-    <author email="support@commonroom.com.au" href="http://apppresser.com">
+
+    <author href="http://commonroom.com.au" email="support@commonroom.com.au">
         Common Room Team
     </author>
 
-    <preference name="phonegap-version" value="3.1.0" />
+    <preference name="phonegap-version" value="3.3.0" />
+    <preference name="android-minSdkVersion" value="14" /><!-- Android 4.0 is minimum supported -->
     <feature name="http://api.phonegap.com/1.0/device" />
     
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.camera" />
-    <!--<gap:plugin name="org.apache.cordova.media-capture" />-->
+    <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <!--<gap:plugin name="org.apache.cordova.contacts" />-->
+    <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.dialogs" />
-    <!--<gap:plugin name="org.apache.cordova.vibration" />-->
+    <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="com.simplec.plugins.localnotification" />
-	<gap:plugin name="com.phonegap.plugins.pushplugin" />
+    <gap:plugin name="com.phonegap.plugins.pushplugin" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
 		<param name="APP_ID" value="506213766155238" />
 		<param name="APP_NAME" value="d2542abac949cbce732f09a9d2cbac2c" />
 	</gap:plugin>
+
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="keyboardDisplayRequiresUserAction" value="false" />
 
     <gap:splash src="res/screen/ios/screen-iphone-portrait.png" gap:platform="ios" width="320" height="480" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960" />
@@ -58,4 +71,5 @@
 
     <content src="http://app.commonroom.com.au/?appp=1" />
     <access origin="*" subdomains="true" />
+
 </widget>
