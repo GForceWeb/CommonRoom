@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "au.com.commonroom.app"
-        version   = "1.0.2">
+        version   = "1.0.3">
 
     <name>Common Room</name>
 
@@ -16,7 +16,7 @@
         Common Room Team
     </author>
 
-    <preference name="phonegap-version" value="3.3.0" />
+    <preference name="phonegap-version" value="3.5.0" />
     <preference name="android-minSdkVersion" value="14" /><!-- Android 4.0 is minimum supported -->
     <feature name="http://api.phonegap.com/1.0/device" />
     
